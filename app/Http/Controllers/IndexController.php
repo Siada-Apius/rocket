@@ -20,12 +20,4 @@ class IndexController extends Controller
 
         return view('welcome', compact('result', 'connection'));
     }
-
-    public function sendDataToConnect (Request $request) {
-
-        $result = Api::getNotamCodes($request->code);
-
-        return redirect()->route('/');
-//        return view('welcome', compact('result'));
-    }
 }

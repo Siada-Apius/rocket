@@ -12,7 +12,6 @@
 */
 
 Route::any('/', 'IndexController@index');
-Route::any('sendDataToConnect', 'IndexController@sendDataToConnect');
 
 /*
 |--------------------------------------------------------------------------
