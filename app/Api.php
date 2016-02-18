@@ -64,18 +64,19 @@ class Api extends Model
 
             $response = $client->getNotam($req);
             $result = new SimpleXMLElement($response);
+            $result_array[] = $result;
 
-            return $result;
+            return $result_array;
 
         } else {
 
             foreach ($code_array as $code) {
                 $req = '<?xml version="1.0" encoding="UTF-8" ?>
-            <REQNOTAM>
-                <USR>' . env('API_USERNAME') . '</USR>
-                <PASSWD>' . md5(env('API_PASSWORD')) . '</PASSWD>
-                <ICAO>' . $code . '</ICAO>
-            </REQNOTAM>';
+                <REQNOTAM>
+                    <USR>' . env('API_USERNAME') . '</USR>
+                    <PASSWD>' . md5(env('API_PASSWORD')) . '</PASSWD>
+                    <ICAO>' . $code . '</ICAO>
+                </REQNOTAM>';
 
                 $response = $client->getNotam($req);
                 $result = new SimpleXMLElement($response);
