@@ -128,8 +128,7 @@
 
     function displayLocation(location, step) {
 
-
-        var content = '<div class="infoWindow">'+ location.text +'</div>';
+        var content = '<div class="infoWindow">'+ location.text[0] +'</div>';
         var thePoint = new google.maps.LatLng(location.lat, location.lon);
         var pinImage = new google.maps.MarkerImage("http://i.stack.imgur.com/uvFaG.png");
 

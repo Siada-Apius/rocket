@@ -42,7 +42,7 @@ class IndexController extends Controller
                         $coords[] = "new google.maps.LatLng ({$lat},{$lon})";
                         $jsonDocs[$i]["lat"] = $lat;
                         $jsonDocs[$i]["lon"] = $lon;
-                        $jsonDocs[$i]["text"] = 'siada' . $i;
+                        $jsonDocs[$i]["text"] = $notam->ItemE;
 
                         $i++;
                     }
