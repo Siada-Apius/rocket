@@ -44,6 +44,7 @@ class IndexController extends Controller
                         $jsonDocs[$i]["lon"] = $lon;
                         $jsonDocs[$i]["text"] = $notam->ItemE;
 
+
                         $i++;
                     }
                 }
